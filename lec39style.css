@@ -1,0 +1,208 @@
+/* CSS reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* to make it scroll when clicked on navbar items */
+html{
+    scroll-behavior: smooth;
+}
+/* CSS Variables */
+/* must be used in future but not used now */
+:root{
+    --navbar-height: 59px;
+}
+/* Navigation Bar*/
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* Navigation Bar : logo and image */
+#logo{
+    margin: 0px 18px;
+}
+#logo img{
+    filter: invert(100%);
+    height: 58px;
+    margin: 0px 16px;
+}
+
+/* Navigation Bar: list styling */
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 5px 26px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    background-color: white;
+    color: black;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 243px;
+    height: 642px;
+}
+#home::before{
+    content: "";
+    background: url('lec39_bg1.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 700px;
+    z-index: -1;
+    opacity: 0.5;
+}
+#home h1{
+    font-family: 'Bree Serif', serif;
+}
+#home p{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+
+/* Services Section */
+#services{
+    margin: 36px;
+    display: flex;
+}
+#services .box{
+    border: 2px solid brown;
+    padding: 40px 60px;
+    margin: 2px 20px;
+    border-radius: 40px;
+    background-color: blanchedalmond;
+}
+#services .box img{
+    height: 180px;
+    margin: auto;
+    display: block;
+}
+#services .box p{
+    font-family: 'Bree Serif', serif;
+}
+
+/* Clients Section */
+#client-section{
+    position: relative;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('lec39_bg2.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+    padding: 35px 63px;
+}
+#clients img{
+    height: 158px;
+}
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('lec39_contact_bg.jpg') no-repeat center center/cover;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+#contact-box input, #contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+    margin: 11px 0px;
+}
+#contact-box form{
+    width: 31%;
+    padding: 20px;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 10px 20px;
+}
+/* Utility classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(216, 159, 53);
+    color: black;
+}
+.center{
+    text-align: center;
+}
